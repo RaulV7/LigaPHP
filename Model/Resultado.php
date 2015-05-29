@@ -7,6 +7,10 @@ class Resultado {
     private $_golesE1;
     private $_golesE2;
     
+    public function __construct() {
+        
+    }
+
     public function getIdResult() {
         return $this->_idResult;
     }

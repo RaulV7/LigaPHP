@@ -12,6 +12,10 @@ class Equipo {
      private $_DG;
      private $_puntos;
      
+     public function __construct() {
+         
+     }
+     
      public function getIdEquipo() {
          return $this->_idEquipo;
      }
