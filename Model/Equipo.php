@@ -12,85 +12,84 @@ class Equipo {
      private $_DG;
      private $_puntos;
      
-     function getIdEquipo() {
+     public function getIdEquipo() {
          return $this->_idEquipo;
      }
 
-     function getNombre() {
+     public function getNombre() {
          return $this->_nombre;
      }
 
-     function getPJ() {
+     public function getPJ() {
          return $this->_PJ;
      }
 
-     function getPG() {
+     public function getPG() {
          return $this->_PG;
      }
 
-     function getPE() {
+     public function getPE() {
          return $this->_PE;
      }
 
-     function getPP() {
+     public function getPP() {
          return $this->_PP;
      }
 
-     function getGF() {
+     public function getGF() {
          return $this->_GF;
      }
 
-     function getGC() {
+     public function getGC() {
          return $this->_GC;
      }
 
-     function getDG() {
+     public function getDG() {
          return $this->_DG;
      }
 
-     function getPuntos() {
+     public function getPuntos() {
          return $this->_puntos;
      }
 
-     function setIdEquipo($idEquipo) {
+     public function setIdEquipo($idEquipo) {
          $this->_idEquipo = $idEquipo;
      }
 
-     function setNombre($nombre) {
+     public function setNombre($nombre) {
          $this->_nombre = $nombre;
      }
 
-     function setPJ($PJ) {
+     public function setPJ($PJ) {
          $this->_PJ = $PJ;
      }
 
-     function setPG($PG) {
+     public function setPG($PG) {
          $this->_PG = $PG;
      }
 
-     function setPE($PE) {
+     public function setPE($PE) {
          $this->_PE = $PE;
      }
 
-     function setPP($PP) {
+     public function setPP($PP) {
          $this->_PP = $PP;
      }
 
-     function setGF($GF) {
+     public function setGF($GF) {
          $this->_GF = $GF;
      }
 
-     function setGC($GC) {
+     public function setGC($GC) {
          $this->_GC = $GC;
      }
 
-     function setDG($DG) {
+     public function setDG($DG) {
          $this->_DG = $DG;
      }
 
-     function setPuntos($puntos) {
+     public function setPuntos($puntos) {
          $this->_puntos = $puntos;
      }
-
 
 }
