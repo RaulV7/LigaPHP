@@ -1,7 +1,7 @@
 <?php
 
 class Resultado {
-    private $_idResul;
+    private $_idResult;
     private $_equipo1;
     private $_equipo2;
     private $_golesE1;
