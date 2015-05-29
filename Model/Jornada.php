@@ -12,7 +12,7 @@ class Jornada {
     public function __construct() {
         
     }
-    
+        
     function getIdJornada() {
         return $this->_idJornada;
     }
