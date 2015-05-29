@@ -61,16 +61,13 @@ class DAOJornada{
 		$c = conectar();
 		$sql="select * from jornada";
 		$resultado = $c->query($sql);
-		//mostrar resultado bonito
 		print "<table>";
 		$ncampos = mysqli_num_fields($resultado);
-		//imprime encabezados de la consulta
 		print "<tr>";
 		for($i=0; $i<$ncampos;$i++){
 		  print "<td><b><font color='black'>". mysqli_fetch_field_direct($resultado, $i)->name."</font></b></td>";
 		}
 		print "</tr>";
-		//ahora todo el contenido de la consulta
 		print "<tr>";
 		for($i=0; $i<$ncampos;$i++){
 		 	while($fila=mysqli_fetch_row($resultado)){  //mientras hayan registros
@@ -90,18 +87,16 @@ class DAOJornada{
 		$sql="select * from jornada where idJornada= $id";
 		$resultado = $c->query($sql);
 		if(!$c->query($sql)){
-				print "Error al realizar la busqueda";//.$c->mysql_error();
+				print "Error al realizar la busqueda";
 		}else{
 			echo "<center><h3><strong>Resultado de la busqueda</strong><h3></center>";
 					print "<table>";
 					$ncampos = mysqli_num_fields($resultado);
-					//imprime encabezados de la consulta
 					print "<tr>";
 					for($i=0; $i<$ncampos;$i++){
 					  print "<td><b><font color='black'>". mysqli_fetch_field_direct($resultado, $i)->name."</font></b></td>";
 					}
 					print "</tr>";
-					//ahora todo el contenido de la consulta
 					print "<tr>";
 					for($i=0; $i<$ncampos;$i++){
 					 	while($fila=mysqli_fetch_row($resultado)){  //mientras hayan registros
