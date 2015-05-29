@@ -12,7 +12,7 @@ class Jugador {
     public function __construct() {
         
     }
-
+    
     public function getIdJugador() {
         return $this->_idJugador;
     }
