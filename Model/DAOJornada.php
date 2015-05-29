@@ -111,6 +111,7 @@ class DAOJornada{
 					print "</tr>";
 		     }
 		mysqli_close($c);
+                
 	}
 }
 ?>
