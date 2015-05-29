@@ -1,6 +1,6 @@
 <?php
 
-class Jugador extends Equipo{
+class Jugador {
     private $_idJugador;
     private $_nombre;
     private $_apelido;
@@ -12,7 +12,7 @@ class Jugador extends Equipo{
     public function __construct() {
         
     }
-    
+
     public function getIdJugador() {
         return $this->_idJugador;
     }

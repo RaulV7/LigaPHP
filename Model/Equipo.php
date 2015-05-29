@@ -15,7 +15,8 @@ class Equipo {
      public function __construct() {
          
      }
-     
+
+
      public function getIdEquipo() {
          return $this->_idEquipo;
      }
