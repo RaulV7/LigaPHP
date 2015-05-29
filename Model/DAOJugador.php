@@ -20,7 +20,7 @@ class DAOJugador {
         if (!$c -> query($sql)){
             print "Error al ejecutar la consulta";
         }else{
-            echo '<script language="javascript">alert("Equipo insertado correctamente!");</script>';
+            echo '<script language="javascript">alert("Jugador insertado correctamente!");</script>';
         }
         mysqli_close($c);
         }
@@ -31,7 +31,7 @@ class DAOJugador {
         if (!$c -> query($sql)){
             print "Error al ejecutar la consulta";
         }else{
-            echo '<script language="javascript">alert("Equipo eliminado correctamente!");</script>';
+            echo '<script language="javascript">alert("Jugador eliminado correctamente!");</script>';
         }
         mysqli_close($c);
     }
@@ -48,7 +48,7 @@ class DAOJugador {
         if (!$c -> query($sql)){
             print "Error al ejecutar la consulta";
         }else{
-            echo '<script language="javascript">alert("Equipo modificado correctamente!");</script>';
+            echo '<script language="javascript">alert("Jugador modificado correctamente!");</script>';
         }
         mysqli_close($c);
     }
