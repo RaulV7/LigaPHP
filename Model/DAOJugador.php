@@ -4,6 +4,7 @@ require_once 'Jugador.php';
 
 class DAOJugador {
     var $con;
+    
     public function __construct() {
         
     }
