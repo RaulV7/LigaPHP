@@ -1,5 +1,6 @@
 <?php
-require 'Model/Equipo.php';
+require '/Model/Equipo.php';
+require '/Model/Jugador.php';
 if (isset($_POST["btn"])){
     $btn = $_POST["btn"];
     if ($btn == "Agregar Equipo") {
@@ -54,8 +55,53 @@ if (isset($_POST["btn"])){
         $eq->modificarDatos($nom, $pj, $pg, $pe, $pp, $gf, $gc, $dif, $pts, $id);
     }
 }
+if (isset($_POST['btn2'])) {
+  $btn2 = $_POST["btn2"];
+  if ($btn2 == "Agregar Jugador") {
+    $jug = new Jugador();
+    $idJug = $_POST["idJug"];
+    $nom = $_POST["nombre"];
+    $ape = $_POST["ape"];
+    $edad = $_POST["edad"];
+    $nac = $_POST["nac"];
+    $pos = $_POST["pos"];
+    $idEq = $_POST["idEq"];
+    $jug->setIdJugador($idJug);
+    $jug->setNombre($nom);
+    $jug->setApelido($ape);
+    $jug->setEdad($edad);
+    $jug->setNacionalidad($nac);
+    $jug->setPosicion($pos);
+    $jug->setIdEquipo($idEq);
+    $jug->agregarDatos($idJug,$nom,$ape,$edad,$nac,$pos,$idEq);
+  }elseif ($btn2 == "Eliminar") {
+    $jug = new Jugador();
+    $idJug = $_POST["idJug"];
+    $jug->eliminarDatos($idJug);
+  }elseif ($btn2 == "Modificar") {
+    $jug = new Jugador();
+    $idJug = $_POST["idJug"];
+    $nom = $_POST["nombre"];
+    $ape = $_POST["ape"];
+    $edad = $_POST["edad"];
+    $nac = $_POST["nac"];
+    $pos = $_POST["pos"];
+    $idEq = $_POST["idEq"];
+    $jug->setIdJugador($idJug);
+    $jug->setNombre($nom);
+    $jug->setApelido($ape);
+    $jug->setEdad($edad);
+    $jug->setNacionalidad($nac);
+    $jug->setPosicion($pos);
+    $jug->setIdEquipo($idEq);
+    $jug->modificarDatos($nom,$ape,$edad,$nac,$pos,$idEq,$idJug);
+  }
+
+}
 
 $equipo = new Equipo();
 $datos = $equipo->mostrarDatos();
-require 'Views/vistaSuperUsuario.php';
+$jugador = new Jugador();
+$datos2 = $jugador->mostrarDatos();
 
+require 'Views/vistaSuperUsuario.php';

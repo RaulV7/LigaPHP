@@ -11,7 +11,7 @@ class Equipo {
      private $_GC;
      private $_DG;
      private $_puntos;
-     
+
      public function __construct() {
          $this->bd=  Conectar::conexion();
      }
@@ -96,7 +96,7 @@ class Equipo {
      public function setPuntos($_puntos) {
          $this->_puntos = $_puntos;
      }
-     public function mostrarDatos(){
+    public function mostrarDatos(){
 		$consulta=$this->bd->query("SELECT * FROM equipo");
 		while($filas=$consulta->fetch_assoc()){
    		$this->equipo[]=$filas;
@@ -109,7 +109,7 @@ class Equipo {
     }
     public function modificarDatos($_nombre,$_PJ,$_PG,$_PE,$_PP,$_GF,$_GC,$_DG,$_puntos,$_idEquipo){
    		$consulta=$this->bd->query("UPDATE equipo SET nombre='$_nombre', PJ=$_PJ, PG=$_PG,PE=$_PE,PP=$_PP, GF=$_GF, GC=$_GC, DG=$_DG, puntos=$_puntos WHERE idEquipo=$_idEquipo;");
-   		print("<script>alert('Datos modificados exitosamente.')</script>");	
+   		print("<script>alert('Datos modificados exitosamente.')</script>");
     }
     public function eliminarDatos($_idEquipo){
    	$consulta=$this->bd->query("DELETE FROM equipo WHERE idEquipo=$_idEquipo;");
