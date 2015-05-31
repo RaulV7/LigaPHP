@@ -41,7 +41,7 @@ class DAOUsuario {
         $tipo = $obj -> getTipo();
         $correo = $obj -> getCorreo();
         
-        $sql = "update usuario set pass = '$pass', tipo = $tipo, correo = '$correo' where userName = '$user' ";
+        $sql = "update usuario set pass = '$pass', tipo = $tipo, correo = '$correo' where userName = '$user'";
         if (!$c -> query($sql)){
             print "Error al ejecutar la consulta";
         }else{
