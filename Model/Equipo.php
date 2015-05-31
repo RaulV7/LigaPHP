@@ -103,8 +103,8 @@ class Equipo {
    	}
            return $this->equipo;
      }
-    public function agregarDatos($_nombre,$_PJ,$_PG,$_PE,$_PP,$_GF,$_GC,$_DG,$_puntos){
-   		$consulta=$this->bd->query("INSERT INTO equipo VALUES ($_nombre,$_PJ,$_PG,$_PE,$_PP,$_GF,$_GC,$_DG,$_puntos);");
+    public function agregarDatos($_idEquipo,$_nombre,$_PJ,$_PG,$_PE,$_PP,$_GF,$_GC,$_DG,$_puntos){
+   		$consulta=$this->bd->query("INSERT INTO equipo VALUES ($_idEquipo,'$_nombre',$_PJ,$_PG,$_PE,$_PP,$_GF,$_GC,$_DG,$_puntos);");
    		print("<script>alert('Datos insertados exitosamente.')</script>");
     }
     public function modificarDatos($_nombre,$_PJ,$_PG,$_PE,$_PP,$_GF,$_GC,$_DG,$_puntos,$_idEquipo){

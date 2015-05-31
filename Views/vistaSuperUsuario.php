@@ -8,32 +8,12 @@
             <table align="center" border="1">
                 <h1>Tabla de posiciones</h1>
                 <tr>
+                    <td>Id Equipo</td>
+                    <td><input type="text" name="id"></td>
+                </tr>
+                <tr>
                     <td>Nombre</td>
                     <td><input type="text" name="nom"></td>
-                </tr>
-                <tr>
-                    <td>Partidos jugados</td>
-                    <td><input type="text" name="pj"></td>
-                </tr>
-                <tr>
-                    <td>Partidos Ganados</td>
-                    <td><input type="text" name="pg"></td>
-                </tr>
-                <tr>
-                    <td>Partidos Empatados</td>
-                    <td><input type="text" name="pe"></td>
-                </tr>
-                <tr>
-                    <td>Partidos Perdidos</td>
-                    <td><input type="text" name="pp"></td>
-                </tr>
-                <tr>
-                    <td>Goles a favor</td>
-                    <td><input type="text" name="gf"></td>
-                </tr>
-                <tr>
-                    <td>Goles en contra</td>
-                    <td><input type="text" name="gc"></td>
                 </tr>
                 <tr>
                     <td>Pos</td>
@@ -62,9 +42,11 @@
                 }
                 ?>
                 <tr>
+                <center>
                     <input type="submit" value="Agregar Equipo" name="btn">
                     <input type="submit" value="Eliminar" name="btn">
                     <input type="submit" value="Modificar" name="btn">
+                </center>
                 </tr>
             </table>
         </form>
