@@ -102,7 +102,7 @@ class Equipo {
    		$this->equipo[]=$filas;
    	}
            return $this->equipo;
-     }
+    }
     public function agregarDatos($_idEquipo,$_nombre,$_PJ,$_PG,$_PE,$_PP,$_GF,$_GC,$_DG,$_puntos){
    		$consulta=$this->bd->query("INSERT INTO equipo VALUES ($_idEquipo,'$_nombre',$_PJ,$_PG,$_PE,$_PP,$_GF,$_GC,$_DG,$_puntos);");
    		print("<script>alert('Datos insertados exitosamente.')</script>");

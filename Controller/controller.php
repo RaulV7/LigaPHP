@@ -1,6 +1,7 @@
 <?php
 require '/Model/Equipo.php';
 require '/Model/Jugador.php';
+require '/Model/Jornada.php';
 if (isset($_POST["btn"])){
     $btn = $_POST["btn"];
     if ($btn == "Agregar Equipo") {
@@ -100,7 +101,31 @@ if (isset($_POST['btn2'])) {
 }
 if (isset($_POST["btn3"])) {
   $btn3 = $_POST["btn3"];
-  
+  if ($btn3 == 'Agregar Jornada') {
+    $jor = new Jornada();
+    $idJor = $_POST["idJor"];
+    $fe = $_POST["fe"];
+    $r1 = $_POST["r1"];
+    $r2 = $_POST["r2"];
+    $r3 = $_POST["r3"];
+    $r4 = $_POST["r4"];
+    $r5 = $_POST["r5"];
+    $jor->setIdJornada($idJor);
+    $jor->setFecha($fe);
+    $jor->setResultado1($r1);
+    $jor->setResultado1($r2);
+    $jor->setResultado1($r3);
+    $jor->setResultado1($r4);
+    $jor->setResultado1($r5);
+    $jor->agregarDatos($idJor, $fe, $r1,$r2,$r3,$r4,$r5);
+
+  }elseif ($btn3 == 'Eliminar') {
+    $jor = new Jornada();
+
+    $idJor = $_POST["idJor"];
+    $jor -> eliminarDatos($idJor);
+  }
+
 
 }
 
@@ -108,5 +133,7 @@ $equipo = new Equipo();
 $datos = $equipo->mostrarDatos();
 $jugador = new Jugador();
 $datos2 = $jugador->mostrarDatos();
+$jornada = new Jornada();
+$datos3 = $jornada->mostrarDatos();
 
 require 'Views/vistaSuperUsuario.php';

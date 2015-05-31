@@ -110,11 +110,11 @@
             <table align="center" border="1">
               <tr>
                   <td>Id Jornada</td>
-                  <td><input type="text" name="iidJor"></td>
+                  <td><input type="text" name="idJor"></td>
               </tr>
               <tr>
                   <td>Fecha de la jornada</td>
-                  <td><input type="date" name="fe"></td>
+                  <td><input type="text" name="fe"></td>
               </tr>
               <tr>
                   <td>Resultado 1</td>
@@ -145,7 +145,7 @@
                 <td>Resultado 5</td>
               </tr>
               <?php
-              foreach ($datos2 as $dato) {
+              foreach ($datos3 as $dato) {
                 echo "<tr><td>".$dato['idJornada']."</td>";
                 echo "<td>".$dato['fecha']."</td>";
                 echo "<td>".$dato['resultado1']."</td>";
