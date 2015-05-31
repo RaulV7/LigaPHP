@@ -7,7 +7,7 @@ class Usuario {
     private $_correo;
     
     public function __construct() {
-        
+        $this->bd=  Conectar::conexion();
     }
     
     function getUserName() {

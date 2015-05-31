@@ -1,6 +1,6 @@
 <?php
 
-class Conexion {
+class Conectar {
     public static function conexion(){
 		$conexion = new mysqli("localhost","root","","liga");
 		$conexion->query("SET NAMES 'utf8'");
