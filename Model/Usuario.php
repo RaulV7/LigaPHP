@@ -42,6 +42,8 @@ class Usuario {
         $this->_correo = $_correo;
     }
 
-
+    public function mostrarDatos(){
+       
+    }
     
 }

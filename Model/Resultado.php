@@ -31,25 +31,27 @@ class Resultado {
         return $this->_golesE2;
     }
 
-    public function setIdResult($idResult) {
-        $this->_idResult = $idResult;
+    public function setIdResult($_idResult) {
+        $this->_idResult = $_idResult;
     }
 
-    public function setEquipo1($equipo1) {
-        $this->_equipo1 = $equipo1;
+    public function setEquipo1($_equipo1) {
+        $this->_equipo1 = $_equipo1;
     }
 
-    public function setEquipo2($equipo2) {
-        $this->_equipo2 = $equipo2;
+    public function setEquipo2($_equipo2) {
+        $this->_equipo2 = $_equipo2;
     }
 
-    public function setGolesE1($golesE1) {
-        $this->_golesE1 = $golesE1;
+    public function setGolesE1($_golesE1) {
+        $this->_golesE1 = $_golesE1;
     }
 
-    public function setGolesE2($golesE2) {
-        $this->_golesE2 = $golesE2;
+    public function setGolesE2(_$golesE2) {
+        $this->_golesE2 = $_golesE2;
     }
+
+
 
 
 
