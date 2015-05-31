@@ -98,6 +98,11 @@ if (isset($_POST['btn2'])) {
   }
 
 }
+if (isset($_POST["btn3"])) {
+  $btn3 = $_POST["btn3"];
+  
+
+}
 
 $equipo = new Equipo();
 $datos = $equipo->mostrarDatos();
