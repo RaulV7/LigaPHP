@@ -104,9 +104,22 @@ class Equipo {
            return $this->equipo;
      }
     public function agregarDatos($_nombre,$_PJ,$_PG,$_PE,$_PP,$_GF,$_GC,$_DG,$_puntos){
-   		$consulta=$this->bd->query("INSERT INTO alumno VALUES ($_carnet,'$_nombre',$_edad,'$_carrera','$_genero', $_cum);");
+   		$consulta=$this->bd->query("INSERT INTO equipo VALUES ($_nombre,$_PJ,$_PG,$_PE,$_PP,$_GF,$_GC,$_DG,$_puntos);");
    		print("<script>alert('Datos insertados exitosamente.')</script>");
-
-
+    }
+    public function modificarDatos($_nombre,$_PJ,$_PG,$_PE,$_PP,$_GF,$_GC,$_DG,$_puntos,$_idEquipo){
+   		$consulta=$this->bd->query("UPDATE equipo SET nombre='$_nombre', PJ=$_PJ, PG=$_PG,PE=$_PE,PP=$_PP, GF=$_GF, GC=$_GC, DG=$_DG, puntos=$_puntos WHERE idEquipo=$_idEquipo;");
+   		print("<script>alert('Datos modificados exitosamente.')</script>");	
+    }
+    public function eliminarDatos($_idEquipo){
+   	$consulta=$this->bd->query("DELETE FROM equipo WHERE idEquipo=$_idEquipo;");
+   	print("<script>alert('Datos eliminados exitosamente.')</script>");
+    }
+    public function BuscarDatos($_idEquipo){
+	$consulta=$this->bd->query("SELECT * FROM equipo WHERE idEquipo=$_idEquipo;");
+	while($filas=$consulta->fetch_assoc()){
+   	$this->equipo[]=$filas;
+        }
+        return $this->equipo;
     }
 }
