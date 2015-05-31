@@ -1,31 +1,23 @@
 <?php
 include '../Conexion/Conexion.php';
-require_once 'Equipo.php';
-
-class DAOEquipo {
-    var $con;
-    
+require_once 'Usuario.php';
+class DAOUsuario {
+    var $con;    
     public function __construct() {
         
     }
     public function insertar($obj){
         $c = conexion();
-        $id = $obj -> getIdEquipo();
-        $name = $obj -> getNombre();
-        $pj = $obj -> getPJ();
-        $pg = $obj -> getPG();
-        $pe = $obj -> getPE();
-        $pp = $obj -> getPP();
-        $gf = $obj -> getGF();
-        $gc = $obj -> getGC();
-        $dg = $obj -> getDG();
-        $points = $obj -> getPuntos();
-        
-        $sql = "insert into equipo values ('$id','$name','$pj','$pg','$pe','$pp','$gf','$gc','$dg','$points')";
+        $user = $obj -> getUserName();
+        $pass = $obj -> getPass();
+        $tipo = $obj -> getTipo();
+        $correo = $obj -> getCorreo();
+               
+        $sql = "insert into usuario values ('$user','$pass',$tipo,'$correo')";
         if (!$c -> query($sql)){
             print "Error al ejecutar la consulta";
         }else{
-            echo '<script language="javascript">alert("Equipo insertado correctamente!");</script>';
+            echo '<script language="javascript">alert("Usuario creado correctamente!");</script>';
         }
         
         mysqli_close($c);
@@ -33,40 +25,34 @@ class DAOEquipo {
         }
     public function eliminar($obj){
         $c = Conexion::conexion();
-        $id = $obj -> getIdEquipo();
-        $sql = "delete from equipo where idEquipo = $id";
+        $user = $obj -> getUserName();
+        $sql = "delete from usuario where userName = $user";
         if (!$c -> query($sql)){
             print "Error al ejecutar la consulta";
         }else{
-            echo '<script language="javascript">alert("Equipo eliminado correctamente!");</script>';
+            echo '<script language="javascript">alert("Usuario eliminado correctamente!");</script>';
         }
         mysqli_close($c);
     }
     public function modificar($obj){
         $c = conexion();
-        $id = $obj -> getIdEquipo();
-        $name = $obj -> getNombre();
-        $pj = $obj -> getPJ();
-        $pg = $obj -> getPG();
-        $pe = $obj -> getPE();
-        $pp = $obj -> getPP();
-        $gf = $obj -> getGF();
-        $gc = $obj -> getGC();
-        $dg = $obj -> getDG();
-        $points = $obj -> getPuntos();
+        $user = $obj -> getUserName();
+        $pass = $obj -> getPass();
+        $tipo = $obj -> getTipo();
+        $correo = $obj -> getCorreo();
         
-        $sql = "update equipo set nombre = '$name', PJ = '$pj', PG = '$pg', PE = '$pe', PP = '$pp', GF = '$gf', GC = '$gc', DG = '$dg', puntos = '$points' where idEquipo = '$id' ";
+        $sql = "update usuario set pass = '$pass', tipo = $tipo, correo = '$correo' where userName = '$user' ";
         if (!$c -> query($sql)){
             print "Error al ejecutar la consulta";
         }else{
-            echo '<script language="javascript">alert("Equipo modificado correctamente!");</script>';
+            echo '<script language="javascript">alert("Usuario modificado correctamente!");</script>';
         }
         
         mysqli_close($c);
     }
     public function listar(){
 		$c = conectar();
-		$sql="select * from equipo";
+		$sql="select * from usuario";
 		$resultado = $c->query($sql);
 		//mostrar resultado bonito
 		print "<table>";
@@ -93,7 +79,7 @@ class DAOEquipo {
 	}
         public function buscar($obj){
 		$c=conectar();
-		$sql="select * from equipo where nombre like '%'$obj'%'";
+		$sql="select * from usuario where userName like '%'$obj'%'";
 		$resultado = $c->query($sql);
 		if(!$c->query($sql)){
 				print "Error al ejecutar la sql: ";//.$c->mysql_error();
