@@ -115,11 +115,4 @@ class Equipo {
    	$consulta=$this->bd->query("DELETE FROM equipo WHERE idEquipo=$_idEquipo;");
    	print("<script>alert('Datos eliminados exitosamente.')</script>");
     }
-    public function BuscarDatos($_idEquipo){
-	$consulta=$this->bd->query("SELECT * FROM equipo WHERE idEquipo=$_idEquipo;");
-	while($filas=$consulta->fetch_assoc()){
-   	$this->equipo[]=$filas;
-        }
-        return $this->equipo;
-    }
 }
