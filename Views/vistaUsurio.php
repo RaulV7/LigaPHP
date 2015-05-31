@@ -8,7 +8,17 @@
             <table align="center">
                 <h1>Tabla de posiciones</h1>
                 <tr>
-                    <td></td>
+                    <td>Pos</td>
+                    <td>Equipo</td>
+                    <td>PJ</td>
+                    <td>G</td>
+                    <td>E</td>
+                    <td>P</td>
+                    <td>GF</td>
+                    <td>GC</td>
+                    <td>+/-</td>
+                    <td>Pts</td>
+                    
                 </tr>
             </table>
         </form>
