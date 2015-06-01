@@ -121,12 +121,9 @@ if (isset($_POST["btn3"])) {
 
   }elseif ($btn3 == 'Eliminar') {
     $jor = new Jornada();
-
     $idJor = $_POST["idJor"];
     $jor -> eliminarDatos($idJor);
   }
-
-
 }
 
 $equipo = new Equipo();
@@ -137,3 +134,5 @@ $jornada = new Jornada();
 $datos3 = $jornada->mostrarDatos();
 
 require 'Views/vistaSuperUsuario.php';
+require 'Views/vistaJornadaSU.php';
+require 'Views/vistaJugadorSU.php';

@@ -71,9 +71,9 @@ class Jornada {
     public function mostrarDatos(){
 		$consulta=$this->bd->query("SELECT * FROM jornada");
 		while($filas=$consulta->fetch_assoc()){
-   		$this->equipo[]=$filas;
+   		$this->jornada[]=$filas;
    	}
-           return $this->equipo;
+           return $this->jornada;
      }
     public function agregarDatos($_idJornada, $_fecha, $_resultado1, $_resultado2, $_resultado3, $_resultado4, $_resultado5){
    		$consulta=$this->bd->query("INSERT INTO jornada VALUES ($_idJornada, $_fecha, $_resultado1, $_resultado2, $_resultado3, $_resultado4, $_resultado5);");
