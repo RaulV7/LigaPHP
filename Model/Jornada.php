@@ -76,7 +76,7 @@ class Jornada {
            return $this->equipo;
      }
     public function agregarDatos($_idJornada, $_fecha, $_resultado1, $_resultado2, $_resultado3, $_resultado4, $_resultado5){
-   		$consulta=$this->bd->query("INSERT INTO jornada VALUES ($_idJornada, $_fecha, $_resultado1, $_resultado2, $_resultado3, $_resultado4, $_resultado5);");
+   		$consulta=$this->bd->query("INSERT INTO jornada VALUES ($_idJornada, '$_fecha', $_resultado1, $_resultado2, $_resultado3, $_resultado4, $_resultado5);");
    		print("<script>alert('Datos insertados exitosamente.')</script>");
     }
     public function modificarDatos($_fecha, $_resultado1, $_resultado2, $_resultado3, $_resultado4, $_resultado5, $_idJornada){
