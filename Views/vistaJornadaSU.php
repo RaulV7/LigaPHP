@@ -43,6 +43,7 @@
           <td>Resultado 4</td>
           <td>Resultado 5</td>
         </tr>
+        
         <?php
         foreach ($datos3 as $dato) {
           echo "<tr><td>".$dato['idJornada']."</td>";
@@ -63,5 +64,6 @@
         </tr>
       </table>
     </form>
+      
   </body>
 </html>

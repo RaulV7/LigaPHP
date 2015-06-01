@@ -3,7 +3,6 @@
         <title>Tabla de posiciones</title>
     </head>
     <body>
-
         <form action="#" method="POST">
             <table align="center" border="1">
                 <h1>Tabla de posiciones</h1>

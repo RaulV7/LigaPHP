@@ -118,7 +118,6 @@ if (isset($_POST["btn3"])) {
     $jor->setResultado1($r4);
     $jor->setResultado1($r5);
     $jor->agregarDatos($idJor, $fe, $r1,$r2,$r3,$r4,$r5);
-
   }elseif ($btn3 == 'Eliminar') {
     $jor = new Jornada();
     $idJor = $_POST["idJor"];

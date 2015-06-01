@@ -86,6 +86,7 @@ class Jornada {
     public function eliminarDatos($_idJornada){
    	$consulta=$this->bd->query("DELETE FROM jornada WHERE idJornada=$_idJornada;");
    	print("<script>alert('Datos eliminados exitosamente.')</script>");
+        
     }
 
 
