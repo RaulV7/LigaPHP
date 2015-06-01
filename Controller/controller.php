@@ -1,12 +1,15 @@
 <?php
+require '/Model/Equipo.php';
+require '/Model/Jugador.php';
+require '/Model/Jornada.php';
 
-require 'Model/Jugador.php';
-require 'Model/Equipo.php';
-require 'Model/Jornada.php';
-
+require 'Views/indexSU.php';
 if (isset($_POST["btn4"])){
     $btn = $_POST["btn4"];
     if ($btn == "Mantenimiento Equipos") {
+      $equipo = new Equipo();
+      $datos = $equipo->mostrarDatos();
+      require 'Views/vistaEquipoSU.php';
       if (isset($_POST["btn"])){
           $btnAdd = $_POST["btn"];
           if ($btnAdd == "Agregar Equipo") {
@@ -61,9 +64,8 @@ if (isset($_POST["btn4"])){
               $eq->modificarDatos($nom, $pj, $pg, $pe, $pp, $gf, $gc, $dif, $pts, $id);
           }
       }
-      $equipo = new Equipo();
-      $datos = $equipo->mostrarDatos();
-      require 'Views/vistaEquipoSU.php';
+
+
     }elseif ($btn == "Mantenimiento Jugadores") {
       if (isset($_POST['btn2'])) {
         $btnAdd2 = $_POST["btn2"];
@@ -143,4 +145,3 @@ if (isset($_POST["btn4"])){
         require 'Views/vistaUsuarioSU.php';
     }
 }
-require 'Views/indexSU.php';
